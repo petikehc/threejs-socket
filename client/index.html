@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Collaborative Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="ui">
+        <div id="toolbar">
+            <div id="shape-tools">
+                <button id="add-cube" class="tool-btn">🔶 Cube</button>
+                <button id="add-sphere" class="tool-btn">🔵 Sphere</button>
+                <button id="add-cylinder" class="tool-btn">🔸 Cylinder</button>
+                <button id="delete-selected" class="tool-btn danger">🗑️ Delete</button>
+            </div>
+            <div id="project-controls">
+                <div class="control-group">
+                    <input type="text" id="project-name" placeholder="Project/Room name">
+                    <button id="save-project" class="action-btn">💾 Save Project</button>
+                    <button id="load-project" class="action-btn">📂 Load Project</button>
+                </div>
+                <div class="control-group">
+                    <button id="join-room" class="action-btn primary">🏠 Join Room</button>
+                    <button id="list-rooms" class="action-btn">📋 List Rooms</button>
+                </div>
+            </div>
+        </div>
+        <div id="status-bar">
+            <div class="status-group">
+                <span class="status-label">Selected:</span>
+                <span id="selected-info" class="status-value">None</span>
+            </div>
+            <div class="status-group">
+                <span class="status-label">Connection:</span>
+                <span id="connection-status" class="status-value">Disconnected</span>
+            </div>
+            <div class="status-group">
+                <span class="status-label">Room:</span>
+                <span id="current-room" class="status-value">None</span>
+            </div>
+            <div class="status-group">
+                <span class="status-label">Users:</span>
+                <span id="user-list" class="status-value">None</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Room List Modal -->
+    <div id="room-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Available Rooms</h3>
+                <button id="close-modal" class="close-btn">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="room-list-container">
+                    <p>Loading rooms...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="canvas-container"></div>
+    
+    <div class="instructions">
+        <h4>Controls</h4>
+        <ul>
+            <li><strong>Left Click:</strong> Select/Move shapes</li>
+            <li><strong>Right Click + Drag:</strong> Rotate camera</li>
+            <li><strong>Mouse Wheel:</strong> Zoom in/out</li>
+            <li><strong>Delete/Backspace:</strong> Delete selected</li>
+            <li><strong>1/2/3 Keys:</strong> Add Cube/Sphere/Cylinder</li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script src="js/scene.js"></script>
+    <script src="js/shapes.js"></script>
+    <script src="js/socket.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

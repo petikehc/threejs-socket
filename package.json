@@ -1,0 +1,29 @@
+{
+  "name": "threejs-socket-app",
+  "version": "1.0.0",
+  "description": "Collaborative Three.js shape editor with WebSocket support",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["threejs", "websocket", "collaboration", "3d", "realtime", "editor"],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/threejs-socket.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/threejs-socket/issues"
+  },
+  "homepage": "https://github.com/your-username/threejs-socket#readme"
+}
