@@ -2,6 +2,8 @@
 
 A real-time collaborative 3D shape editor built with Three.js, Node.js, Express, and Socket.io.
 
+![Three.js Collaborative Editor](docs/screenshot.jpg)
+
 ## Features
 
 - **3D Scene Manipulation**: Create, move, and delete cubes, spheres, and cylinders

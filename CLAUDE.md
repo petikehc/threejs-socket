@@ -25,8 +25,11 @@ threejs-socket/
 │   │   ├── scene.js       # Three.js scene management
 │   │   ├── shapes.js      # Shape creation/manipulation
 │   │   ├── socket.js      # WebSocket client
-│   │   └── cursor.js      # User cursor tracking
-│   ├── css/style.css      # Styling with glassmorphism
+│   │   ├── cursor.js      # User cursor tracking
+│   │   └── onboarding.js  # Interactive user onboarding
+│   ├── css/
+│   │   ├── style.css      # Main styling with glassmorphism
+│   │   └── onboarding.css # Onboarding modal and tooltip styles
 │   └── index.html         # Main HTML
 ├── server/
 │   ├── app.js            # Express + Socket.io server
@@ -44,6 +47,7 @@ threejs-socket/
 7. ✅ Real-time shape operation sync
 8. ✅ Modern UI with glassmorphism design
 9. ✅ User identification and cursor tracking
+10. ✅ Interactive onboarding system with guided tour
 
 ## Key Technical Decisions
 - **File-based storage** instead of database for simplicity
@@ -51,6 +55,8 @@ threejs-socket/
 - **3D cursor tracking** with world-space position conversion
 - **Action notifications** for user activity awareness
 - **Responsive design** with mobile-friendly controls
+- **localStorage onboarding** with cookie-based persistence
+- **Progressive disclosure** in guided tour with contextual tooltips
 
 ## Architecture Notes
 - **Client-Server**: Express serves static files, Socket.io handles real-time events
